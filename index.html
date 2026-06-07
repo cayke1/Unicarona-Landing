@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniCarona — Caronas universitárias com segurança e economia</title>
+  <meta name="description"
+    content="Conecte-se com estudantes da sua universidade, divida o trajeto até o campus e economize todo mês. Caronas universitárias com mapa em tempo real, pagamento via PIX e segurança institucional." />
+  <meta name="theme-color" content="#0B1220" />
+  <meta property="og:title" content="UniCarona — Caronas universitárias" />
+  <meta property="og:description" content="Divida o trajeto até o campus com quem estuda com você. Mais economia, menos trânsito." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════ NAV ══════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav-in">
+      <a href="#top" class="brand">
+        <span class="brand-mark">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M11 35 L24 14 L37 35" stroke="#fff" stroke-width="7" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </span>
+        <span class="brand-name">UniCarona</span>
+      </a>
+      <div class="nav-links">
+        <a href="#funcionalidades" class="desk">Funcionalidades</a>
+        <a href="#como-funciona" class="desk">Como funciona</a>
+        <a href="#economia" class="desk">Economia</a>
+        <a href="#download" class="nav-btn">Baixar o app</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <header class="hero" id="top">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="glow glow-a" data-par="0.06"></div>
+      <div class="glow glow-b" data-par="0.04"></div>
+      <div class="glow glow-c" data-par="0.09"></div>
+    </div>
+
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <span class="hero-badge"><span class="live-dot"></span> UFT · Palmas — caronas no campus</span>
+        <h1>Sua carona até o<br />campus, com <span class="ul grad">quem<br />estuda com você</span></h1>
+        <p class="hero-lead">Encontre motoristas da sua própria universidade no mapa, divida o trajeto e
+          chegue com mais conforto gastando menos. Tudo em um app, com e-mail institucional.</p>
+        <div class="hero-cta">
+          <a href="#download" class="btn btn-primary btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3 20.5V3.5c0-.62.67-1 1.2-.7l14.7 8.5a.81.81 0 010 1.4L4.2 21.2c-.53.3-1.2-.08-1.2-.7z" />
+            </svg>
+            Baixar para Android
+          </a>
+          <a href="#economia" class="btn btn-ghost-light btn-lg">Ver quanto economizo →</a>
+        </div>
+        <div class="hero-trust">
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg> 100% gratuito</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg> Sem taxas escondidas</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg> Só e-mail @uft</span>
+        </div>
+      </div>
+
+      <!-- PHONE VISUAL -->
+      <div class="hero-visual">
+        <div class="float float-near" data-par="0.10">
+          <span class="ping"></span><span>3 caronas perto de você</span>
+        </div>
+
+        <div class="phone" id="heroPhone" data-par="0.03">
+          <div class="phone-notch"></div>
+          <div class="screen">
+            <div class="s-status">
+              <span>9:41</span>
+              <span class="dots"><i></i><i></i></span>
+            </div>
+            <div class="s-map">
+              <span class="road r1"></span><span class="road r2"></span>
+              <svg class="route-svg" viewBox="0 0 270 470" preserveAspectRatio="none">
+                <path class="route-path" id="routePath"
+                  d="M52 130 Q96 230 150 250 T210 380" />
+              </svg>
+              <div class="pin start">
+                <div class="head">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="10" r="3" />
+                    <path d="M12 21s-7-6.5-7-11a7 7 0 1114 0c0 4.5-7 11-7 11z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="pin end">
+                <div class="head"><span style="font-size:13px">🎓</span></div>
+              </div>
+              <div class="car-dot" id="carDot">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+                  <path d="M5 11l1.5-4.5A2 2 0 018.4 5h7.2a2 2 0 011.9 1.5L19 11v6a1 1 0 01-1 1h-1a1 1 0 01-1-1v-1H8v1a1 1 0 01-1 1H6a1 1 0 01-1-1v-6z" />
+                </svg>
+              </div>
+            </div>
+            <div class="s-sheet">
+              <div class="s-grab"></div>
+              <div class="s-sheet-h"><b>Caronas disponíveis</b><em>ordenado por distância</em></div>
+              <div class="ride">
+                <div class="av" style="background:linear-gradient(150deg,var(--sky-400),var(--sky-600))">CM</div>
+                <div class="info"><b>Carlos M.</b><span>Centro → UFT Palmas · 1,2 km</span></div>
+                <div class="price">R$ 4,50</div>
+              </div>
+              <div class="ride">
+                <div class="av" style="background:linear-gradient(150deg,var(--orange-400),var(--orange-600))">AP</div>
+                <div class="info"><b>Ana P.</b><span>Plano Diretor Sul → UFT · 2,8 km</span></div>
+                <div class="price">R$ 6,00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="float float-ride" data-par="0.13">
+          <div class="av">CM</div>
+          <div class="info"><b>Carlos aceitou!</b><span>Chega em 4 min</span></div>
+          <div class="ok"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg></div>
+        </div>
+
+        <div class="float float-save" data-par="0.16">
+          <div class="lab">Você economiza</div>
+          <div class="val">R$ 168<small>/mês</small></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════ STAT STRIPE ══════════════ -->
+  <section class="stripe">
+    <div class="wrap stripe-in">
+      <div class="stripe-cell reveal"><div class="num" data-count="68" data-suffix="%">0</div><div class="lab">de economia vs. ir sozinho</div></div>
+      <div class="stripe-cell reveal" data-d="1"><div class="num" data-count="2" data-prefix="&lt; " data-suffix=" min">0</div><div class="lab">do cadastro à carona confirmada</div></div>
+      <div class="stripe-cell reveal" data-d="2"><div class="num" data-count="6" data-suffix=" kg">0</div><div class="lab">de CO₂ poupados por viagem*</div></div>
+      <div class="stripe-cell reveal" data-d="3"><div class="num" data-count="100" data-suffix="%">0</div><div class="lab">gratuito, sem taxa de assinatura</div></div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FEATURES (bento) ══════════════ -->
+  <section class="section" id="funcionalidades">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Funcionalidades</span>
+        <h2 class="h-sec">Do mapa ao PIX,<br />o trajeto completo num app só</h2>
+        <p class="sub">Tudo pensado para a rotina universitária — encontrar, combinar e pagar a carona em poucos toques.</p>
+      </div>
+
+      <div class="bento">
+        <!-- big feature -->
+        <div class="card card-feature reveal">
+          <span class="tag-soft">tempo real</span>
+          <div class="f-ico ico-sky" style="background:rgba(56,189,248,.15);color:var(--sky-300)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg>
+          </div>
+          <h3>Mapa de caronas em tempo real</h3>
+          <p>Veja motoristas disponíveis no mapa, ordenados por proximidade. Quanto mais perto de você, mais no topo aparece.</p>
+          <div class="mini-map">
+            <svg class="mline" viewBox="0 0 400 200" preserveAspectRatio="none">
+              <path d="M96 60 Q180 120 152 116 T280 118" stroke="#38BDF8" stroke-width="3" fill="none" stroke-dasharray="7 5" stroke-linecap="round" opacity=".75"/>
+            </svg>
+            <span class="mp a"></span><span class="mp b"></span><span class="mp c"></span>
+          </div>
+        </div>
+
+        <div class="card col-3 reveal" data-d="1">
+          <div class="f-ico ico-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+          <h3>Autocomplete de endereços</h3>
+          <p>Busca inteligente de origem e destino via Google Places. Comece a digitar e selecione — sem endereço completo.</p>
+        </div>
+
+        <div class="card col-3 reveal" data-d="2">
+          <div class="f-ico ico-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>
+          <h3>Aceite em tempo real</h3>
+          <p>O passageiro é notificado no instante em que o motorista aceita o pedido, com atualização contínua do status.</p>
+        </div>
+
+        <div class="card col-2 reveal" data-d="1">
+          <div class="f-ico ico-sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11l1.5-4.5A2 2 0 018.4 5h7.2a2 2 0 011.9 1.5L19 11v6h-2v-2H7v2H5z"/><circle cx="7.5" cy="14.5" r="1.5"/><circle cx="16.5" cy="14.5" r="1.5"/></svg></div>
+          <h3>Torne-se motorista</h3>
+          <p>Ative o modo motorista no perfil e publique rotas com cálculo automático de custo por assento.</p>
+        </div>
+
+        <div class="card col-2 reveal" data-d="2">
+          <div class="f-ico ico-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg></div>
+          <h3>Pagamento via PIX</h3>
+          <p>Checkout completo com valor por assento e taxa do app calculados na hora. Suporte a PIX integrado.</p>
+        </div>
+
+        <div class="card col-2 reveal" data-d="3">
+          <div class="f-ico ico-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Segurança universitária</h3>
+          <p>Autenticação por e-mail institucional, sessão protegida com JWT e refresh token, reset de senha por e-mail.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ HOW IT WORKS ══════════════ -->
+  <section class="section how" id="como-funciona">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <span class="eyebrow">Como funciona</span>
+        <h2 class="h-sec">Da conta à carona<br />em três passos</h2>
+        <p class="sub">Feito para ser rápido — em menos de dois minutos você está a caminho do campus.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <h3>Crie sua conta</h3>
+          <p>Cadastre-se com e-mail e senha. Quer oferecer caronas? Ative o modo motorista no seu perfil.</p>
+        </div>
+        <div class="step reveal" data-d="1">
+          <div class="step-num">2</div>
+          <h3>Encontre ou publique</h3>
+          <p>Passageiro: veja caronas no mapa e solicite uma vaga. Motorista: publique seu trajeto com horário e preço.</p>
+        </div>
+        <div class="step reveal" data-d="2">
+          <div class="step-num">3</div>
+          <h3>Confirme e vá</h3>
+          <p>O motorista aceita, você recebe a confirmação, paga pelo app e está pronto para a viagem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SAVINGS ══════════════ -->
+  <section class="section savings" id="economia">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow on-dark">Economia</span>
+        <h2 class="h-sec">Veja quanto você<br />deixa de gastar</h2>
+        <p class="sub">Dividir o trajeto com colegas custa uma fração de ir sozinho de app ou no próprio carro. Ajuste e veja a diferença no seu mês.</p>
+      </div>
+
+      <div class="save-grid">
+        <div class="save-controls reveal">
+          <div class="ctrl">
+            <div class="ctrl-top"><label for="rDays">Dias de aula por semana</label><output id="oDays">5</output></div>
+            <input type="range" id="rDays" min="1" max="6" step="1" value="5" />
+          </div>
+          <div class="ctrl">
+            <div class="ctrl-top"><label for="rKm">Distância só de ida (km)</label><output id="oKm">8 km</output></div>
+            <input type="range" id="rKm" min="2" max="30" step="1" value="8" />
+          </div>
+          <div class="ctrl">
+            <div class="ctrl-top"><label for="rSeats">Pessoas dividindo a carona</label><output id="oSeats">3</output></div>
+            <input type="range" id="rSeats" min="2" max="4" step="1" value="3" />
+          </div>
+          <div class="ctrl" style="margin-bottom:0">
+            <div class="ctrl-top"><label>Comparar carona com</label></div>
+            <div class="seg" id="modeSeg">
+              <button data-mode="app" class="on">App de transporte</button>
+              <button data-mode="car">Carro próprio</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="save-panel reveal" data-d="1">
+          <div class="glow-s"></div>
+          <div class="save-headline">
+            <div class="lab">Sua economia estimada</div>
+            <div class="big"><span class="cur">R$</span><span id="saveBig">0</span></div>
+            <div class="per">por mês &nbsp;·&nbsp; <span id="saveYear">R$ 0</span> por ano letivo</div>
+          </div>
+          <div class="bars">
+            <div class="bar-row bar-solo">
+              <div class="bl"><b><i></i><span id="soloLabel">Sozinho de app</span></b><span class="amt" id="soloAmt">R$ 0</span></div>
+              <div class="bar-track"><div class="bar-fill" id="soloBar"></div></div>
+            </div>
+            <div class="bar-row bar-car">
+              <div class="bl"><b><i></i>De UniCarona</b><span class="amt" id="carAmt">R$ 0</span></div>
+              <div class="bar-track"><div class="bar-fill" id="carBar"></div></div>
+            </div>
+          </div>
+          <div class="save-note">* estimativa ilustrativa — valores reais variam por cidade e rota</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SHOWCASE ══════════════ -->
+  <section class="section showcase">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <span class="eyebrow">Por dentro do app</span>
+        <h2 class="h-sec">Bonito, rápido<br />e fácil de usar</h2>
+        <p class="sub">Uma prévia das telas principais. Em breve, capturas reais direto do app.</p>
+      </div>
+      <div class="shots">
+        <div class="shot reveal">
+          <div class="shot-phone"><div class="shot-screen">
+            <!-- SWAP: <img src="screenshots/mapa.png" alt="Tela do mapa" style="width:100%;height:100%;object-fit:cover"> -->
+            <div class="ph-lab">
+              <span class="ph-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg></span>
+              <b>tela: mapa de caronas</b>screenshot real do app<br />(arraste aqui depois)
+            </div>
+          </div></div>
+          <div class="shot-cap"><b>Mapa em tempo real</b><span>Caronas perto de você, ordenadas por distância</span></div>
+        </div>
+        <div class="shot reveal" data-d="1">
+          <div class="shot-phone"><div class="shot-screen">
+            <!-- SWAP: <img src="screenshots/detalhe.png" alt="Detalhe da carona" style="width:100%;height:100%;object-fit:cover"> -->
+            <div class="ph-lab">
+              <span class="ph-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></span>
+              <b>tela: detalhe da carona</b>screenshot real do app<br />(arraste aqui depois)
+            </div>
+          </div></div>
+          <div class="shot-cap"><b>Detalhe & aceite</b><span>Motorista, rota, horário e confirmação na hora</span></div>
+        </div>
+        <div class="shot reveal" data-d="2">
+          <div class="shot-phone"><div class="shot-screen">
+            <!-- SWAP: <img src="screenshots/pagamento.png" alt="Pagamento PIX" style="width:100%;height:100%;object-fit:cover"> -->
+            <div class="ph-lab">
+              <span class="ph-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg></span>
+              <b>tela: pagamento PIX</b>screenshot real do app<br />(arraste aqui depois)
+            </div>
+          </div></div>
+          <div class="shot-cap"><b>Pagamento via PIX</b><span>Valor por assento e taxa calculados automaticamente</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CTA ══════════════ -->
+  <section class="section cta" id="download">
+    <div class="cta-grid"></div>
+    <div class="wrap cta-in reveal">
+      <h2>Pronto para dividir<br />o caminho?</h2>
+      <p>Baixe o UniCarona, conecte-se com colegas da sua universidade e comece a economizar no trajeto até o campus.</p>
+      <div class="cta-btns">
+        <a href="#" class="btn btn-white btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3 20.5V3.5c0-.62.67-1 1.2-.7l14.7 8.5a.81.81 0 010 1.4L4.2 21.2c-.53.3-1.2-.08-1.2-.7z" />
+          </svg>
+          Baixar APK — Android
+        </a>
+        <a href="https://github.com/cayke1/UniCarona-Frontend" target="_blank" rel="noopener"
+          class="btn btn-ghost-w btn-lg">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z" />
+          </svg>
+          Ver no GitHub
+        </a>
+      </div>
+      <div class="cta-meta">APK em breve · projeto acadêmico de código aberto</div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#top" class="brand">
+            <span class="brand-mark">
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <path d="M11 35 L24 14 L37 35" stroke="#fff" stroke-width="7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="brand-name">UniCarona</span>
+          </a>
+          <p>Caronas universitárias com segurança e economia. Projeto de Sistemas — UFT, Palmas, 2026/1.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Produto</h4>
+          <a href="#funcionalidades">Funcionalidades</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#economia">Economia</a>
+          <a href="#download">Baixar o app</a>
+        </div>
+        <div class="footer-col">
+          <h4>Projeto</h4>
+          <a href="https://github.com/cayke1/UniCarona-Frontend" target="_blank" rel="noopener">Frontend</a>
+          <a href="https://github.com/cayke1/UniCarona-Backend" target="_blank" rel="noopener">Backend</a>
+          <a href="https://docs.google.com/document/d/1eAGRml0e_OHiBDmfKmVxXiY2vqIHA_a7KOmhXDg3kdI/edit?usp=sharing"
+            target="_blank" rel="noopener">Documentação</a>
+        </div>
+      </div>
+      <div class="footer-bot">
+        <p>© 2026 UniCarona · Projeto de Sistemas · UFT</p>
+        <p class="made">feito com ☕ por estudantes</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
